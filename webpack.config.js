@@ -40,17 +40,7 @@ const plugins = [
   }),
 ];
 
-if (kit.isProduction()) {
-  plugins.push(new webpack.optimize.UglifyJsPlugin({
-    minimize: true,
-    sourceMap: false,
-    compress: {
-      warnings: false,
-    },
-  }));
-}
-
-module.exports = {
+const config = {
   entry: {
     index: 'index.js',
   },
@@ -92,3 +82,17 @@ module.exports = {
 
   plugins,
 };
+
+if (kit.isProduction()) {
+  config.devtool = 'source-map';
+
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    minimize: true,
+    sourceMap: true,
+    compress: {
+      warnings: false,
+    },
+  }));
+}
+
+module.exports = config;
