@@ -48,6 +48,8 @@ const config = {
   output: {
     path: BUILD_PATH,
     filename: '[name].js',
+    libraryTarget: 'umd',
+    library: 'chromeExtensionStorage',
   },
 
   resolve: {
