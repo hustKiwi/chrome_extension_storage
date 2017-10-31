@@ -5,7 +5,7 @@ const CleanupPlugin = require('clean-webpack-plugin');
 
 
 const { join } = kit.path;
-const BUILD_PATH = join(__dirname, 'build');
+const BUILD_PATH = join(__dirname, 'dist');
 const SRC_PATH = join(__dirname, 'src');
 const NODE_MODULES_PATH = join(__dirname, 'node_modules');
 
@@ -89,6 +89,7 @@ if (kit.isProduction()) {
   config.plugins.push(new webpack.optimize.UglifyJsPlugin({
     minimize: true,
     sourceMap: true,
+    mangle: false,
     compress: {
       warnings: false,
     },
