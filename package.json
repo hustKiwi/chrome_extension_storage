@@ -1,0 +1,38 @@
+{
+  "name": "chrome_extension_storage",
+  "version": "1.0.0",
+  "description": "a simple encapsulation for manipulating the storage API when develops a Chrome extension.",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --watch --progress --colors",
+    "prod": "yarn && NODE_ENV=production webpack --progress --colors",
+    "lint": "eslint **/*.js",
+    "upgrade:eslint": "make upgrade_eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hustKiwi/chrome_extension_storage.git"
+  },
+  "author": "https://github.com/hustKiwi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hustKiwi/chrome_extension_storage/issues"
+  },
+  "homepage": "https://github.com/hustKiwi/chrome_extension_storage#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "happypack": "^4.0.0",
+    "nokit": "^0.25.2",
+    "uglify-js": "^3.1.6",
+    "webpack": "^3.8.1"
+  }
+}
