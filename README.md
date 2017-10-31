@@ -5,7 +5,7 @@ Chrome extension.
 The API follows the interfaces of [chrome storage](https://developer.chrome.com/apps/storage),
 but provides the feature of setting expires.
 
-## Usage Example
+## An Usage Example
 ```javascript
 import ChromeStorage from 'chrome_extension_storage';
 
