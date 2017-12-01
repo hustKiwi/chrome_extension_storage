@@ -19,6 +19,11 @@ storage.set({
 
 storage.get('testKey').then((value) => {
   assert(value.testKey === 'testValue');
+  assert(value.testKey2 === undefined);
+});
+
+storage.get(['testKey', 'testKey2']).then((value) => {
+  assert(value.testKey === 'testValue');
   assert(value.testKey2 === 'testValue2');
 });
 ```
